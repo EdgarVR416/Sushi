@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord - SushiHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-poppins">
+
+    <div class="custom-cursor"></div>
+    <div class="particles"></div>
+    
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg z-50 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="logo-container">
+                        <img src="https://i.imgur.com/xOcFHWZ.png" alt="SushiHub Logo" class="logo-image">
+                        <div class="brand-text">SushiHub</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="games.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-gamepad mr-2"></i>Games
+                    </a>
+                    <a href="executor.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-terminal mr-2"></i>Executors
+                    </a>
+                    <a href="pricing.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-dollar-sign mr-2"></i>Pricing
+                    </a>
+                    <a href="discord.html" class="nav-link active hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fab fa-discord mr-2"></i>Discord
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="discord-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fab fa-discord mr-2"></i>Join Discord
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800/50">
+            <div class="px-4 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-home mr-3"></i>Home
+                </a>
+                <a href="games.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-gamepad mr-3"></i>Games
+                </a>
+                <a href="executor.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-terminal mr-3"></i>Executors
+                </a>
+                <a href="pricing.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-dollar-sign mr-3"></i>Pricing
+                </a>
+                <a href="discord.html" class="block text-blue-400 py-2">
+                    <i class="fab fa-discord mr-3"></i>Discord
+                </a>
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4">
+                    <i class="fab fa-discord mr-2"></i>Join Discord
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/10 via-transparent to-transparent"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="hero-badge mb-8 reveal">
+                <span class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 backdrop-blur-sm text-blue-300 px-6 py-2 rounded-full text-sm font-medium floating">
+                    💬 1,500+ Active Members
+                </span>
+            </div>
+            
+            <div class="discord-logo mb-8 reveal">
+                <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto floating shadow-2xl">
+                    <i class="fab fa-discord text-6xl text-white"></i>
+                </div>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight floating">
+                Join Our <span class="text-gradient bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent">Discord</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto reveal leading-relaxed">
+                Connect with fellow scripters, get instant support, and stay updated on the latest features. Our community is active 24/7 and always ready to help.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 reveal">
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-primary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fab fa-discord mr-3 text-xl group-hover:animate-bounce"></i>Join Discord Server
+                </a>
+                <a href="#community-features" class="btn-secondary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fas fa-arrow-down mr-3 group-hover:animate-pulse"></i>Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="community-features" class="py-24 px-4 bg-gradient-to-b from-gray-900/50 to-gray-800/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6">
+                    <span class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 backdrop-blur-sm text-blue-300 px-6 py-2 rounded-full text-sm font-medium">
+                        Community Features
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 reveal">
+                    Why Join Our <span class="text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Community?</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto reveal leading-relaxed">
+                    More than just a support server - we're a thriving community of scripters, developers, and Roblox enthusiasts.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-headset text-4xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">24/7 Support</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Get help anytime you need it. Our staff team and experienced community members are always online to assist with any issues.</p>
+                    <div class="feature-highlight">
+                        <span class="text-blue-400 text-sm font-medium">• Average response time: Under 5 minutes</span>
+                    </div>
+                </div>
+
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-bell text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Latest Updates</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Be the first to know about new script releases, game support additions, and important announcements.</p>
+                    <div class="feature-highlight">
+                        <span class="text-green-400 text-sm font-medium">• Real-time notifications for updates</span>
+                    </div>
+                </div>
+
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-users text-4xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Active Community</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Connect with other scripters, share experiences, trade tips, and make friends who share your passion for scripting.</p>
+                    <div class="feature-highlight">
+                        <span class="text-purple-400 text-sm font-medium">• 1,500+ active members daily</span>
+                    </div>
+                </div>
+
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-code text-4xl text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Script Sharing</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Share your own scripts, get feedback from the community, and discover custom configurations from other users.</p>
+                    <div class="feature-highlight">
+                        <span class="text-cyan-400 text-sm font-medium">• Dedicated script showcase channels</span>
+                    </div>
+                </div>
+
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-gift text-4xl text-orange-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Exclusive Perks</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Discord members get exclusive access to beta features, special events, and community-only script previews.</p>
+                    <div class="feature-highlight">
+                        <span class="text-orange-400 text-sm font-medium">• Member-only channels and perks</span>
+                    </div>
+                </div>
+
+                <div class="feature-card enhanced glass-effect p-8 rounded-xl card-hover tilt-card reveal">
+                    <div class="feature-icon mb-6 floating">
+                        <i class="fas fa-trophy text-4xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Events & Giveaways</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Regular community events, script competitions, and giveaways with amazing prizes for active members.</p>
+                    <div class="feature-highlight">
+                        <span class="text-yellow-400 text-sm font-medium">• Weekly events and monthly giveaways</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-gradient-to-b from-gray-800/30 to-gray-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 reveal">
+                    Server <span class="text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Statistics</span>
+                </h2>
+                <p class="text-xl text-gray-300 reveal">Real numbers from our thriving Discord community</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-card enhanced glass-effect p-8 rounded-xl text-center card-hover tilt-card reveal">
+                    <div class="stat-icon mb-4">
+                        <i class="fas fa-users text-5xl text-blue-500"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-400 mb-2">1,500+</div>
+                    <div class="text-lg text-gray-300 font-medium">Active Members</div>
+                    <div class="text-sm text-gray-500 mt-2">Growing daily</div>
+                </div>
+
+                <div class="stat-card enhanced glass-effect p-8 rounded-xl text-center card-hover tilt-card reveal">
+                    <div class="stat-icon mb-4">
+                        <i class="fas fa-clock text-5xl text-green-500"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-green-400 mb-2">24/7</div>
+                    <div class="text-lg text-gray-300 font-medium">Support Available</div>
+                    <div class="text-sm text-gray-500 mt-2">Always here to help</div>
+                </div>
+
+                <div class="stat-card enhanced glass-effect p-8 rounded-xl text-center card-hover tilt-card reveal">
+                    <div class="stat-icon mb-4">
+                        <i class="fas fa-comments text-5xl text-purple-500"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-purple-400 mb-2">50,000+</div>
+                    <div class="text-lg text-gray-300 font-medium">Messages Daily</div>
+                    <div class="text-sm text-gray-500 mt-2">Active conversations</div>
+                </div>
+
+                <div class="stat-card enhanced glass-effect p-8 rounded-xl text-center card-hover tilt-card reveal">
+                    <div class="stat-icon mb-4">
+                        <i class="fas fa-user-shield text-5xl text-orange-500"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-orange-400 mb-2">12</div>
+                    <div class="text-lg text-gray-300 font-medium">Staff Members</div>
+                    <div class="text-sm text-gray-500 mt-2">Dedicated to helping</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-24 px-4 bg-gradient-to-b from-gray-800/30 to-black">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="cta-container enhanced glass-effect p-12 rounded-3xl tilt-card reveal relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-indigo-600/10"></div>
+                <div class="relative z-10">
+                    <div class="discord-logo-large mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto floating shadow-2xl">
+                            <i class="fab fa-discord text-5xl text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Join the Community?</h2>
+                    <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Join over 1,500 scripters in our Discord server. Get instant support, connect with the community, and never miss an update.
+                    </p>
+                    
+                    <div class="join-benefits mb-8">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="benefit-tag">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span class="text-gray-300">Instant Support</span>
+                            </div>
+                            <div class="benefit-tag">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span class="text-gray-300">Latest Updates</span>
+                            </div>
+                            <div class="benefit-tag">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span class="text-gray-300">Active Community</span>
+                            </div>
+                            <div class="benefit-tag">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span class="text-gray-300">Exclusive Perks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-primary enhanced text-xl px-12 py-4 group">
+                            <i class="fab fa-discord mr-3 text-2xl group-hover:animate-bounce"></i>
+                            Join SushiHub Discord
+                        </a>
+                        <a href="index.html" class="btn-secondary enhanced text-xl px-12 py-4 group">
+                            <i class="fas fa-home mr-3 group-hover:animate-pulse"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gradient-to-t from-gray-900 to-gray-800 py-16 px-4 border-t border-gray-700/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 reveal">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/xOcFHWZ.png" alt="SushiHub Logo" class="w-8 h-8 mr-3">
+                        <div class="text-3xl font-bold text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">SushiHub</div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        A script hub that actually works. No keys, no drama, no BS. 
+                        Just scripts that do what they're supposed to do, when they're supposed to do it.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="social-link text-gray-400 hover:text-blue-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-discord text-2xl"></i>
+                        </a>
+                        <a href="#" class="social-link text-gray-400 hover:text-blue-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="social-link text-gray-400 hover:text-red-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="games.html" class="footer-link">Games</a></li>
+                        <li><a href="executor.html" class="footer-link">Executors</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                        <li><a href="discord.html" class="footer-link text-blue-400">Discord</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="footer-link">Discord Server</a></li>
+                        <li><a href="#" class="footer-link">Documentation</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Report Issues</a></li>
+                        <li><a href="#" class="footer-link">Status Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700/50 mt-12 pt-8 text-center text-gray-400">
+                <p class="text-lg">&copy; 2025 SushiHub. Built by scripters, for scripters. Made with ❤️ and way too much coffee.</p>
+                <p class="text-sm mt-2 text-gray-500">Discord is a trademark of Discord Inc. We are not affiliated with Discord.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

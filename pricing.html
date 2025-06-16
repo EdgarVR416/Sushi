@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - SushiHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-poppins">
+
+    <div class="custom-cursor"></div>
+    <div class="particles"></div>
+    
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg z-50 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="logo-container">
+                        <img src="https://i.imgur.com/xOcFHWZ.png" alt="SushiHub Logo" class="logo-image">
+                        <div class="brand-text">SushiHub</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="games.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-gamepad mr-2"></i>Games
+                    </a>
+                    <a href="executor.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-terminal mr-2"></i>Executors
+                    </a>
+                    <a href="pricing.html" class="nav-link active hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-dollar-sign mr-2"></i>Pricing
+                    </a>
+                    <a href="discord.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fab fa-discord mr-2"></i>Discord
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="discord-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fab fa-discord mr-2"></i>Join Discord
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800/50">
+            <div class="px-4 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-home mr-3"></i>Home
+                </a>
+                <a href="games.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-gamepad mr-3"></i>Games
+                </a>
+                <a href="executor.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-terminal mr-3"></i>Executors
+                </a>
+                <a href="pricing.html" class="block text-blue-400 py-2">
+                    <i class="fas fa-dollar-sign mr-3"></i>Pricing
+                </a>
+                <a href="discord.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fab fa-discord mr-3"></i>Discord
+                </a>
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4">
+                    <i class="fab fa-discord mr-2"></i>Join Discord
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-32">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-blue-900/20 to-purple-900/20"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-600/10 via-transparent to-transparent"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-8xl font-bold mb-12 leading-tight floating">
+                Simple <span class="text-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Pricing</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto reveal leading-relaxed">
+                Find the perfect plan for your gaming needs. Every plan gives you full access to our amazing script collection - no tricks, no hidden costs, just pure gaming fun!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 reveal">
+                <a href="#pricing-plans" class="btn-primary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fas fa-credit-card mr-3 group-hover:animate-pulse"></i>View Plans
+                </a>
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-secondary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fas fa-question mr-3 group-hover:animate-bounce"></i>Have Questions?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing-plans" class="py-24 px-4 bg-gradient-to-b from-gray-900/50 to-gray-800/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-12 reveal">
+                    Choose Your <span class="text-gradient bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Plan</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto reveal leading-relaxed">
+                    Every plan comes with our complete script collection, awesome community support, and fresh updates to keep you ahead of the game!
+                </p>
+            </div>
+
+            <div class="flex justify-center mb-12 reveal">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-2 border border-gray-700/50">
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <button class="currency-tab active px-4 py-2 rounded-lg transition-all" data-currency="robux">
+                            <i class="fab fa-roblox mr-2"></i>Robux
+                        </button>
+                        <button class="currency-tab px-4 py-2 rounded-lg transition-all" data-currency="brl">
+                            <i class="fas fa-dollar-sign mr-2"></i>BRL (Pix)
+                        </button>
+                        <button class="currency-tab px-4 py-2 rounded-lg transition-all" data-currency="usd">
+                            <i class="fab fa-paypal mr-2"></i>USD (PayPal)
+                        </button>
+                        <button class="currency-tab px-4 py-2 rounded-lg transition-all" data-currency="boost">
+                            <i class="fab fa-discord mr-2"></i>Discord Boost
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <div class="pricing-card glass-effect rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 reveal transform hover:scale-105 hover:-translate-y-2">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-week text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Weekly</h3>
+                        <p class="text-gray-400">Perfect for trying us out!</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="price-container">
+                            <div class="currency-price robux">
+                                <div class="text-4xl font-bold text-blue-400 mb-2">500</div>
+                                <div class="text-gray-400">Robux • 7 days</div>
+                            </div>
+                            <div class="currency-price brl hidden">
+                                <div class="text-4xl font-bold text-green-400 mb-2">R$ 6</div>
+                                <div class="text-gray-400">Via Pix • 7 days</div>
+                            </div>
+                            <div class="currency-price usd hidden">
+                                <div class="text-4xl font-bold text-cyan-400 mb-2">$1.75</div>
+                                <div class="text-gray-400">Via PayPal • 7 days</div>
+                            </div>
+                            <div class="currency-price boost hidden">
+                                <div class="text-4xl font-bold text-purple-400 mb-2">1</div>
+                                <div class="text-gray-400">Discord Boost • 7 days</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8 h-40">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Access to all supported games</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Premium script collection</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Community Discord support</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Regular script updates</span>
+                        </div>
+                    </div>
+                    
+                    <button class="buy-btn w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" data-plan="weekly">
+                        Get Started 
+                    </button>
+                </div>
+
+                <div class="pricing-card glass-effect rounded-2xl p-8 border-2 border-green-500/50 hover:border-green-400/70 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 reveal relative transform scale-105 hover:scale-110 hover:-translate-y-2">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-to-r from-green-400 to-blue-500 text-black px-6 py-2 rounded-full text-sm font-bold animate-pulse">
+                            ⭐ MOST POPULAR 
+                        </span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Monthly</h3>
+                        <p class="text-gray-400">Best value for gamers!</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="price-container">
+                            <div class="currency-price robux">
+                                <div class="text-4xl font-bold text-green-400 mb-2">700</div>
+                                <div class="text-gray-400">Robux • 30 days</div>
+                            </div>
+                            <div class="currency-price brl hidden">
+                                <div class="text-4xl font-bold text-green-400 mb-2">R$ 10</div>
+                                <div class="text-gray-400">Via Pix • 30 days</div>
+                            </div>
+                            <div class="currency-price usd hidden">
+                                <div class="text-4xl font-bold text-cyan-400 mb-2">$3.00</div>
+                                <div class="text-gray-400">Via PayPal • 30 days</div>
+                            </div>
+                            <div class="currency-price boost hidden">
+                                <div class="text-4xl font-bold text-purple-400 mb-2">2</div>
+                                <div class="text-gray-400">Discord Boosts • 30 days</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8 h-40">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Access to all supported games</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Premium script collection</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Community Discord support</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Regular script updates</span>
+                        </div>
+                    </div>
+                    
+                    <button class="buy-btn w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" data-plan="monthly">
+                        Get Started 
+                    </button>
+                </div>
+
+                <div class="pricing-card glass-effect rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 reveal transform hover:scale-105 hover:-translate-y-2">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-infinity text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Lifetime</h3>
+                        <p class="text-gray-400">Pay once, enjoy forever!</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="price-container">
+                            <div class="currency-price robux">
+                                <div class="text-4xl font-bold text-purple-400 mb-2">900</div>
+                                <div class="text-gray-400">Robux • Forever</div>
+                            </div>
+                            <div class="currency-price brl hidden">
+                                <div class="text-4xl font-bold text-green-400 mb-2">R$ 12</div>
+                                <div class="text-gray-400">Via Pix • Forever</div>
+                            </div>
+                            <div class="currency-price usd hidden">
+                                <div class="text-4xl font-bold text-cyan-400 mb-2">$4.50</div>
+                                <div class="text-gray-400">Via PayPal • Forever</div>
+                            </div>
+                            <div class="currency-price boost hidden">
+                                <div class="text-4xl font-bold text-purple-400 mb-2">6</div>
+                                <div class="text-gray-400">Discord Boosts • Forever</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8 h-40">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Access to all supported games</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Premium script collection</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Community Discord support</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Regular script updates</span>
+                        </div>
+                    </div>
+                    
+                    <button class="buy-btn w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" data-plan="lifetime">
+                        Get Lifetime 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-gradient-to-b from-gray-800/30 to-black">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-12 reveal">
+                    Frequently Asked <span class="text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-300 reveal">
+                    Got questions? We've got answers! Here's everything you need to know about getting started with SushiHub.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            We've got you covered with multiple payment options! You can pay with Robux through our official Roblox group, use Pix if you're in Brazil, PayPal for international payments, or even boost our Discord server. Pick whatever works best for you! 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">Do you offer refunds?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            We totally get it - digital purchases can feel risky! While we can't do refunds for digital services, if something goes wrong on our end or you run into technical issues we can't fix, we're here to help make it right. Just hop into our Discord and chat with our support team - we're pretty awesome at solving problems! 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">What games are supported?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            Oh, we've got all the good stuff! We support 10+ of the hottest games !
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">How do I get access after payment?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            Super easy! Once you've paid, just jump into our Discord server and create a ticket with your payment proof (screenshot, transaction ID, whatever you've got). Our amazing staff team will check it out and get you all set up with access usually within a few hours, sometimes even faster if we're online!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">Can I upgrade plan?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            Absolutely! Want to upgrade? Just pay the difference and you're good to go!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-effect rounded-xl border border-gray-700/50 reveal">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-700/20 transition-all rounded-xl">
+                        <span class="text-lg font-medium text-white">Is the lifetime plan really lifetime?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform faq-icon"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4 transition-all duration-300 overflow-hidden" style="max-height: 0; opacity: 0;">
+                        <p class="text-gray-300 leading-relaxed">
+                            You bet it is! When we say lifetime, we mean LIFETIME! As long as SushiHub exists, you'll have access to everything - all future updates, new scripts, new games
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-gradient-to-t from-gray-900/50 to-transparent">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 reveal">
+                Still Have <span class="text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Questions?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 reveal">
+                Our awesome support team is standing by to help you out! Jump into our Discord community where real humans are ready to answer your questions instantly. 
+            </p>
+            <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-primary enhanced text-lg px-10 py-4 tilt-card group reveal">
+                <i class="fab fa-discord mr-3 group-hover:animate-pulse"></i>Get Support
+            </a>
+        </div>
+    </section>
+
+    <div id="purchase-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-900/95 border border-gray-700/50 rounded-2xl p-8 max-w-md w-full mx-4 glass-effect transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
+            <div class="text-center mb-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shopping-cart text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2" id="modal-title">Complete Your Purchase</h3>
+                <p class="text-gray-400" id="modal-plan">Weekly Plan</p>
+            </div>
+            
+            <div class="bg-gray-800/50 rounded-xl p-6 mb-6 border border-gray-700/30">
+                <h4 class="text-lg font-semibold text-white mb-4">How to Purchase:</h4>
+                <div id="payment-instructions" class="space-y-3 text-gray-300">
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <button onclick="window.open('https://discord.com/invite/kKHztfCZdG', '_blank')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    <i class="fab fa-discord mr-2"></i>Join Discord & Purchase
+                </button>
+                <button onclick="closePurchaseModal()" class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-medium transition-all duration-300">
+                    Go Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currencyTabs = document.querySelectorAll('.currency-tab');
+            const currencyPrices = document.querySelectorAll('.currency-price');
+
+            currencyTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const selectedCurrency = this.dataset.currency;
+                    
+                    currencyTabs.forEach(t => {
+                        t.classList.remove('active', 'bg-blue-600', 'text-white');
+                        t.classList.add('text-gray-400', 'hover:text-white');
+                    });
+                    
+                    this.classList.add('active', 'bg-blue-600', 'text-white');
+                    this.classList.remove('text-gray-400', 'hover:text-white');
+                    
+                    currencyPrices.forEach(price => price.classList.add('hidden'));
+                    
+                    document.querySelectorAll(`.currency-price.${selectedCurrency}`).forEach(price => {
+                        price.classList.remove('hidden');
+                    });
+                });
+            });
+
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('.faq-icon');
+                    
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            const otherFaqItem = otherQuestion.parentElement;
+                            const otherAnswer = otherFaqItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('.faq-icon');
+                            
+                            otherAnswer.style.maxHeight = '0px';
+                            otherAnswer.style.opacity = '0';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                            setTimeout(() => otherAnswer.classList.add('hidden'), 300);
+                        }
+                    });
+                    
+                    const isOpen = !answer.classList.contains('hidden');
+                    
+                    if (isOpen) {
+                        answer.style.maxHeight = '0px';
+                        answer.style.opacity = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                        setTimeout(() => answer.classList.add('hidden'), 300);
+                    } else {
+                        answer.classList.remove('hidden');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            const buyBtns = document.querySelectorAll('.buy-btn');
+            const modal = document.getElementById('purchase-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            buyBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const plan = this.dataset.plan;
+                    showPurchaseModal(plan);
+                });
+            });
+        });
+
+        function showPurchaseModal(plan) {
+            const modal = document.getElementById('purchase-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            const modalPlan = document.getElementById('modal-plan');
+            const paymentInstructions = document.getElementById('payment-instructions');
+            
+            const activeCurrency = document.querySelector('.currency-tab.active').dataset.currency;
+            
+            modalTitle.textContent = `Get ${plan.charAt(0).toUpperCase() + plan.slice(1)} Access`;
+            modalPlan.textContent = `${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan`;
+            
+            let instructions = '';
+            
+            switch(activeCurrency) {
+                case 'robux':
+                    instructions = `
+                        <div class="flex items-start space-x-3">
+                            <i class="fab fa-roblox text-blue-400 mt-1"></i>
+                            <div>
+                                <p class="font-medium">Robux Payment</p>
+                                <p class="text-sm text-gray-400">Join our Discord server and create a ticket. Our staff will guide you through the Robux payment process via our official Roblox group.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'brl':
+                    instructions = `
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-dollar-sign text-green-400 mt-1"></i>
+                            <div>
+                                <p class="font-medium">Pix Payment (BRL)</p>
+                                <p class="text-sm text-gray-400">Join our Discord server and create a ticket. We'll provide you with the Pix key and QR code for instant payment. Available 24/7!</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'usd':
+                    instructions = `
+                        <div class="flex items-start space-x-3">
+                            <i class="fab fa-paypal text-blue-400 mt-1"></i>
+                            <div>
+                                <p class="font-medium">PayPal Payment (USD)</p>
+                                <p class="text-sm text-gray-400">Join our Discord server and create a ticket. Our team will send you the PayPal payment link for secure checkout.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'boost':
+                    instructions = `
+                        <div class="flex items-start space-x-3">
+                            <i class="fab fa-discord text-purple-400 mt-1"></i>
+                            <div>
+                                <p class="font-medium">Discord Boost Payment</p>
+                                <p class="text-sm text-gray-400">Simply boost our Discord server the required number of times! Create a ticket after boosting and we'll activate your access immediately.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+            
+            paymentInstructions.innerHTML = instructions;
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.style.transform = 'scale(1)';
+                modalContent.style.opacity = '1';
+            }, 10);
+        }
+
+        function closePurchaseModal() {
+            const modal = document.getElementById('purchase-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.style.transform = 'scale(0.95)';
+            modalContent.style.opacity = '0';
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        document.getElementById('purchase-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePurchaseModal();
+            }
+        });
+    </script>
+</body>
+</html> 

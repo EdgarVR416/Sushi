@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executors - SushiHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-poppins">
+
+    <div class="custom-cursor"></div>
+    <div class="particles"></div>
+    
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg z-50 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="logo-container">
+                        <img src="https://i.imgur.com/xOcFHWZ.png" alt="SushiHub Logo" class="logo-image">
+                        <div class="brand-text">SushiHub</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="games.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-gamepad mr-2"></i>Games
+                    </a>
+                    <a href="executor.html" class="nav-link active hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-terminal mr-2"></i>Executors
+                    </a>
+                    <a href="pricing.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fas fa-dollar-sign mr-2"></i>Pricing
+                    </a>
+                    <a href="discord.html" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">
+                        <i class="fab fa-discord mr-2"></i>Discord
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="discord-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fab fa-discord mr-2"></i>Join Discord
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800/50">
+            <div class="px-4 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-home mr-3"></i>Home
+                </a>
+                <a href="games.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-gamepad mr-3"></i>Games
+                </a>
+                <a href="executor.html" class="block text-blue-400 py-2">
+                    <i class="fas fa-terminal mr-3"></i>Executors
+                </a>
+                <a href="pricing.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fas fa-dollar-sign mr-3"></i>Pricing
+                </a>
+                <a href="discord.html" class="block hover:text-blue-400 transition-colors py-2">
+                    <i class="fab fa-discord mr-3"></i>Discord
+                </a>
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4">
+                    <i class="fab fa-discord mr-2"></i>Join Discord
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="hero-badge mb-8 reveal">
+                <span class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 backdrop-blur-sm text-purple-300 px-6 py-2 rounded-full text-sm font-medium floating">
+                    💻 8+ Compatible Executors
+                </span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight floating">
+                <span class="text-gradient bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent">Executor</span> Compatibility
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto reveal leading-relaxed">
+                Works with your favorite executor, no matter which one you prefer. We support all major executors with full compatibility testing.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 reveal">
+                <a href="#compatibility" class="btn-primary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fas fa-check-circle mr-3 group-hover:animate-pulse"></i>Check Compatibility
+                </a>
+                <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-secondary enhanced text-lg px-10 py-4 tilt-card group">
+                    <i class="fas fa-question mr-3 group-hover:animate-bounce"></i>Need Help?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="compatibility" class="py-24 px-4 bg-gradient-to-b from-gray-900/50 to-gray-800/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6">
+                    <span class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 backdrop-blur-sm text-purple-300 px-6 py-2 rounded-full text-sm font-medium">
+                        Executor Support
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 reveal">
+                    Universal <span class="text-gradient bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent">Compatibility</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto reveal leading-relaxed">
+                    Our scripts are rigorously tested across all major executors to ensure maximum compatibility and performance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-code text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Wave</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full progress-bar" style="width: 100%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-blue-400 text-sm font-semibold">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-terminal text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Awp</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full progress-bar" style="width: 100%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-green-400 text-sm font-semibold">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-bolt text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Swift</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full progress-bar" style="width: 95%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-purple-400 text-sm font-semibold">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-700 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-mobile-alt text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Mobile Executors</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-3 rounded-full progress-bar" style="width: 80%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-gray-400 text-sm font-semibold">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-rocket text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Velocity</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-600 h-3 rounded-full progress-bar" style="width: 85%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-orange-400 text-sm font-semibold">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-cog text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Ronix</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-3 rounded-full progress-bar" style="width: 80%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-yellow-400 text-sm font-semibold">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-green-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-atom text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Xeno</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-500 h-3 rounded-full progress-bar" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-orange-400 text-sm font-semibold">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="executor-card enhanced glass-effect p-4 rounded-xl card-hover tilt-card reveal">
+                    <div class="executor-header mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-3 floating-small">
+                            <i class="fas fa-sun text-lg text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-3 text-white">Solara</h3>
+                    <div class="compatibility-bar mb-3">
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-500 h-3 rounded-full progress-bar" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-orange-400 text-sm font-semibold">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 reveal">
+                <div class="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-6 text-center text-white">How We Test Compatibility</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 floating-small">
+                                <i class="fas fa-vial text-2xl text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-3 text-white">Automated Testing</h4>
+                            <p class="text-gray-300 leading-relaxed">Every script is automatically tested against all supported executors to ensure compatibility.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 floating">
+                                <i class="fas fa-users text-2xl text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-3 text-white">Community Feedback</h4>
+                            <p class="text-gray-300 leading-relaxed">Real user reports help us track compatibility issues and improve our scripts continuously.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 floating">
+                                <i class="fas fa-chart-bar text-2xl text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-3 text-white">Performance Monitoring</h4>
+                            <p class="text-gray-300 leading-relaxed">We monitor script performance across executors to maintain optimal compatibility ratings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16 reveal">
+                <div class="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Having Compatibility Issues?</h3>
+                    <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+                        Our support team is here to help you get the best performance from your executor of choice.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="btn-primary enhanced">
+                            <i class="fas fa-headset mr-2"></i>Get Support
+                        </a>
+                        <a href="discord.html" class="btn-secondary enhanced">
+                            <i class="fab fa-discord mr-2"></i>Join Community
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-t from-gray-900 to-gray-800 py-16 px-4 border-t border-gray-700/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 reveal">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/xOcFHWZ.png" alt="SushiHub Logo" class="w-8 h-8 mr-3">
+                        <div class="text-3xl font-bold text-gradient bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">SushiHub</div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        A script hub that actually works. No keys, no drama, no BS. 
+                        Just scripts that do what they're supposed to do, when they're supposed to do it.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="social-link text-gray-400 hover:text-blue-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-discord text-2xl"></i>
+                        </a>
+                        <a href="#" class="social-link text-gray-400 hover:text-blue-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="social-link text-gray-400 hover:text-red-400 transition-all duration-300 tilt-card">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="games.html" class="footer-link">Games</a></li>
+                        <li><a href="executor.html" class="footer-link text-blue-400">Executors</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                        <li><a href="discord.html" class="footer-link">Discord</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://discord.com/invite/kKHztfCZdG" target="_blank" class="footer-link">Discord Server</a></li>
+                        <li><a href="#" class="footer-link">Documentation</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Report Issues</a></li>
+                        <li><a href="#" class="footer-link">Status Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700/50 mt-12 pt-8 text-center text-gray-400">
+                <p class="text-lg">&copy; 2025 SushiHub. Built by scripters, for scripters. Made with ❤️ and way too much coffee.</p>
+                <p class="text-sm mt-2 text-gray-500">All trademarks and executor names are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
